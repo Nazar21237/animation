@@ -1,0 +1,128 @@
+/* p::first-letter{
+    font-size: 2em;
+    color: red;
+}
+p::first-line{
+    color:orange;
+    background-color: bisque;
+}
+p::selection{
+    background-color: darkcyan;
+    color: whitesmoke;
+}
+p{
+    cursor: pointer;
+}
+button{
+    cursor: pointer;
+} */
+/* p::before,p::after{
+    color: red;
+    background-color: darkcyan;
+}
+p::before{
+    content: '>>>>>';
+}
+p::after{
+    content: '<<<<<';
+}
+ul{
+    margin: 30px auto 20px;
+    width: 80%;
+    text-align: center;
+}
+li{
+    position: relative;
+}
+li + li{
+    margin-top: 20px;     */
+/* } */
+/* li::before,li::after{
+    position: absolute;
+} */
+/* li::before{
+    content: url(../images/access-point.svg);
+    display: inline-block;
+    transform: scale(0,8); */
+    /* right: calc(100% + 10px);
+} */
+/* li::after{
+    content: close-quote;
+    left: calc(100% + 10px);
+} */
+*{
+    box-sizing: border-box;
+}
+body{
+    min-height: 200vh;
+}
+main{
+    margin-top: 80px;
+}
+.page-header{
+    padding: 15px 15px;
+    position: fixed;
+    background-color: white;
+    
+
+    left: 0;
+    right: 0;
+    top: 0;
+
+    box-shadow: 8px 9px 58px -5px rgba(0,0,0,0.26);
+    -webkit-box-shadow: 8px 9px 58px -5px rgba(0,0,0,0.26);
+    -moz-box-shadow: 8px 9px 58px -5px rgba(0,0,0,0.26);
+}
+.list{
+    font-size: 0;
+    text-align: center;
+}
+.list-item{
+    --animation-durection:0.3s;
+
+    display: inline-block;
+    border: 1px solid black;
+    position: relative;
+
+    font-size: 15px;
+    /* transition-property: color, background-color;
+    transition-duration: 0.3s; */
+
+}
+
+.list-item:hover{
+    background-color: orange;
+    color: white;
+    transition-timing-function: linear;
+
+    /* transition-duration: 1s; */
+    
+}
+.list-item::after{
+    
+    content: '';
+    display: block;
+    position: absolute;
+
+    height: 3px;
+    width: 100%;
+    background-color: black;
+
+    top: calc(100% + 5px);
+
+    transition: width var(--animation-durection) ease-in-out;
+}
+.list-item:hover::after{
+    width: 100%;
+}
+.list-item + .list-item{
+    margin-left:20px;
+}
+.link{
+    display: inline-block;
+    padding: 10px 15px;
+
+    text-decoration: none;
+    color: inherit;
+}
+
